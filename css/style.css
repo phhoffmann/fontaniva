@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2em;
+  color: #000033;
+}
+
+h3 {
+  font-size: 1.25em;
+  color: #000033;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #666666;
+}
+
+/* 01 - Header */
+
+.main-menu {
+  background-color: #000033;
+  color: #fff;
+  display: flex;
+  height: 115px;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.main-menu ul {
+  display: flex;
+  list-style-type: none;
+  margin-right: 4em;
+}
+
+.main-menu ul li {
+  margin: 0 2em;
+}
+
+.main-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.main-menu ul li a:hover {
+  color: #00CCCC;
+}
+
+.logo {
+  float: left;
+  align-self: center;
+  margin-left: 2em;
+}
+
+/* 02 - Banner */
+
+.banner {
+  background-image: url('../img/banner-temp.png');
+  background-size: cover;
+  height: 526px;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+}
+
+.banner-text {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.banner-title {
+  font-size: 5em;
+  color: #00CCCC;
+  font-weight: 700;
+}
+
+.title-orange {
+  color: #FF9900;
+}
+
+.banner-subtext {
+  color: #fff;
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* 03 - About Us */
+
+.about-us {
+  display: inline-grid;
+  display: -ms-inline-grid;
+  grid-gap: 2em;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  margin: 0 10em;
+  padding: 5em 0;
+}
+
+.about-us h2 {
+  padding-bottom: 0.5em;
+}
+
+
+/* 04 - Nosso Serviços - Our Services */
+.our-services {
+  height: 100%;
+  background-color: #efefef;
+}
+
+.our-services h2 {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.our-services-columns  {
+  display: inline-grid;
+  display: -ms-inline-grid;
+  grid-gap: 10em;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  margin: 0 3em 3em 3em;
+}
+
+.our-services-columns h3 {
+  padding: 1em 0;
+}
+
+/* 05 - Como Funciona ? How it Works? */
+
+.how-it-works {
+  display: inline-grid;
+  display: -ms-inline-grid;
+  grid-gap: 10em;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  background-color: #000033;
+}
+
+.how-it-works-text {
+  margin: 3em 0 3em 4em;
+}
+
+.how-it-works h2, .how-it-works p {
+  color: #efefef;
+}
+
+ .how-it-works-text .sub-title {
+   color: #00CCCC;
+   font-weight: 900;
+   margin-top: 2em;
+ }
+
+ .how-it-works-text a {
+   color: #FF9900;
+ }
+
+ .how-it-works-image {
+   background: url('/img/how-it-works.jpg');
+   background-size: cover;
+ }
+
+ /* 06 - Por que Fontaniva? */
+
+ .why-fontaniva {
+  text-align: center;
+  padding: 4rem 0;   
+ }
+
+.container-why {
+  display: inline-grid;
+  display: -ms-inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+  padding: 2em 2em;
+  justify-content: space-evenly;
+}
+
+.why-fontaniva img {
+  margin-bottom: 0.5em;
+}
+
+.why-fontaniva .column-why h3 {
+  margin: 0.5em 0;
+}
+
+.column-why {
+  padding: 0 2em;
+}
+/* 07 - Perguntas Frequentes */
+
+.ask {
+  background-color: #efefef;
+  padding: 2em 5em;
+}
+
+.ask h2 {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+button.accordion {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #CCCCCC;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  font-size: 1em;
+  color: #000033;
+  padding-top: 1em;
+}
+
+button.accordion:after {
+  content: '\f107';
+  font-family: "fontawesome";
+  float: right;
+}
+
+button.accordion.is-open:after {
+  content: '\f106';
+  margin: 0.5em 0;
+}
+
+button.accordion:hover, button.accordion.is-open {
+  background-color: #ddd;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  padding-top: 1em;
+}
+
+/* 08 - Contato */
+
+.contact {
+  background-color: #fff;
+  padding: 3em 0;
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.form {
+  margin: 0 2em;
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.form-blue {
+  color: #00CCCC;
+}
+
+.form input {
+  border: 1px solid #666666;
+  border-radius: 0.250em;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  width: 90%;
+  font-size: 1em;
+}
+
+.form-right input {
+  color: #00CCCC;
+  font-weight: 700;
+}
+
+.form textarea {
+  width: 90%;
+  font-size: 1em;
+  margin-left: 0.1em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+.form button {
+  width: 90%;
+  line-height: 3em;
+  border-radius: 0.250em;
+  background-color: #00CCCC;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+
+
+/* 09 - Footer */
+
+.footer {
+  background-color: #000033;
+  text-align: center;
+  color: #999999;
+  font-size: 0.8em;
+  padding: 3em 0;
+}
