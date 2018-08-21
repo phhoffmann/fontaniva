@@ -42,7 +42,7 @@ p {
 .main-menu ul {
   display: flex;
   list-style-type: none;
-  margin-right: 4em;
+  margin-right: 2em;
 }
 
 .main-menu ul li {
@@ -107,7 +107,7 @@ p {
   grid-gap: 2em;
   grid-template-columns: 1fr 2fr;
   align-items: center;
-  margin: 0 10em;
+  margin: 0 15em;
   padding: 5em 0;
 }
 
@@ -160,27 +160,27 @@ p {
   color: #efefef;
 }
 
- .how-it-works-text .sub-title {
-   color: #00CCCC;
-   font-weight: 900;
-   margin-top: 2em;
- }
+.how-it-works-text .sub-title {
+  color: #00CCCC;
+  font-weight: 900;
+  margin-top: 2em;
+}
 
- .how-it-works-text a {
-   color: #FF9900;
- }
+.how-it-works-text a {
+  color: #FF9900;
+}
 
- .how-it-works-image {
-   background: url('/img/how-it-works.jpg');
-   background-size: cover;
- }
+.how-it-works-image {
+  background: url('/img/how-it-works.jpg');
+  background-size: cover;
+}
 
- /* 06 - Por que Fontaniva? */
+/* 06 - Por que Fontaniva? */
 
- .why-fontaniva {
+.why-fontaniva {
   text-align: center;
   padding: 4rem 0;   
- }
+}
 
 .container-why {
   display: inline-grid;
@@ -295,6 +295,7 @@ button.accordion:hover, button.accordion.is-open {
   margin-left: 0.1em;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
+  resize: none;
 }
 
 .form button {
@@ -306,6 +307,7 @@ button.accordion:hover, button.accordion.is-open {
   border: none;
   font-size: 1em;
   cursor: pointer;
+  margin: 2% 0;
 }
 
 
