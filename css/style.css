@@ -102,58 +102,93 @@ p {
 /* 03 - About Us */
 
 .about-us {
-  display: inline-grid;
-  display: -ms-inline-grid;
-  grid-gap: 2em;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-flow: wrap;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
   margin: 0 15em;
   padding: 5em 0;
 }
 
+.about-img, .about-text {
+  flex: 1;
+}
+
+.about-img {
+  justify-content: center;
+  display: flex;
+}
 .about-us h2 {
   padding-bottom: 0.5em;
 }
 
 
+
 /* 04 - Nosso Serviços - Our Services */
-.our-services {
+.servicos {
   height: 100%;
   background-color: #efefef;
-}
-
-.our-services h2 {
+  padding-bottom: 2em;
   text-align: center;
-  padding: 4rem 0;
 }
 
-.our-services-columns  {
-  display: inline-grid;
-  display: -ms-inline-grid;
-  grid-gap: 10em;
-  grid-template-columns: 1fr 1fr 1fr;
+.servicos h2 {
+  padding: 4rem 0 2em 0;
+}
+
+.servicos > .servicos-wrap {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-flow: wrap;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.coluna1  {
+  width: 300px;
   text-align: center;
-  align-items: center;
-  margin: 0 3em 3em 3em;
+  margin-bottom: 2em;
 }
-
-.our-services-columns h3 {
-  padding: 1em 0;
+.coluna1 h3 {
+  margin: 1em 0;
 }
 
 /* 05 - Como Funciona ? How it Works? */
 
 .how-it-works {
-  display: inline-grid;
-  display: -ms-inline-grid;
-  grid-gap: 10em;
-  grid-template-columns: 50% 50%;
-  align-items: center;
-  background-color: #000033;
+   background-color: #000033;
+   padding: 1em;
+}
+.how-it-works-container {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-flow: wrap;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around; 
+}
+
+.how-it-works-text, .how-it-works-image {
+  flex: 1;
 }
 
 .how-it-works-text {
   margin: 3em 0 3em 4em;
+  width: 45%;
+}
+
+.how-it-works-image {
+  background: url('/img/how-it-works.jpg');
+  background-size: cover;
 }
 
 .how-it-works h2, .how-it-works p {
@@ -170,11 +205,6 @@ p {
   color: #FF9900;
 }
 
-.how-it-works-image {
-  background: url('/img/how-it-works.jpg');
-  background-size: cover;
-}
-
 /* 06 - Por que Fontaniva? */
 
 .why-fontaniva {
@@ -182,13 +212,19 @@ p {
   padding: 4rem 0;   
 }
 
+.why-fontaniva h2 {
+  margin-bottom: 1em;
+}
+
 .container-why {
-  display: inline-grid;
-  display: -ms-inline-grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2em;
-  padding: 2em 2em;
-  justify-content: space-evenly;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-flow: wrap;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .why-fontaniva img {
@@ -200,7 +236,8 @@ p {
 }
 
 .column-why {
-  padding: 0 2em;
+  width: 300px;
+  padding: 1em;
 }
 /* 07 - Perguntas Frequentes */
 
@@ -262,13 +299,29 @@ button.accordion:hover, button.accordion.is-open {
 
 .form {
   margin: 0 2em;
-  display: grid;
-  display: -ms-grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-flow: wrap;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.left, .right {
+  flex: 1;
+}
+
+.form-container {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .contact p {
   text-align: center;
+  margin: 0 5em;
 }
 
 .form-blue {
@@ -284,7 +337,7 @@ button.accordion:hover, button.accordion.is-open {
   font-size: 1em;
 }
 
-.form-right input {
+.right input {
   color: #00CCCC;
   font-weight: 700;
 }
@@ -296,6 +349,8 @@ button.accordion:hover, button.accordion.is-open {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   resize: none;
+  border-radius: 0.250em;
+  border: 1px solid #666666;
 }
 
 .form button {
@@ -307,7 +362,6 @@ button.accordion:hover, button.accordion.is-open {
   border: none;
   font-size: 1em;
   cursor: pointer;
-  margin: 2% 0;
 }
 
 
@@ -320,4 +374,49 @@ button.accordion:hover, button.accordion.is-open {
   color: #999999;
   font-size: 0.8em;
   padding: 3em 0;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 2440) {
+  .why-fontaniva {
+    padding: 4em 4em;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .left, .right {
+    flex: auto;
+  }
+
+  .ask h3 {
+    font-size: 1em;
+  }
+
+  .how-it-works-text {
+    text-align: center;
+    margin: 3em 2em;
+  }
+
+  .coluna1 {
+    width: 440px;
+  }
+  .how-it-works-image {
+    display: none;
+  }
+
+
+
+button.accordion:after {
+  display: none;
+}
+
+button.accordion.is-open:after {
+  display: none;
+}
+}
+
+@media only screen and (max-width: 650) {
+  
 }
