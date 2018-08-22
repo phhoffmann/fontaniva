@@ -68,16 +68,12 @@ p {
 
 /* 02 - Banner */
 
-.banner {
-  background-image: url('../img/banner-temp.png');
+.banner-img {
+  background-image: url('../../img/banner-temp.png');
   background-size: cover;
-  height: 526px;
-  width: 100%;
-  margin: 0 auto;
-  display: table;
 }
 
-.banner-text {
+/* .banner-text {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
@@ -97,7 +93,7 @@ p {
   color: #fff;
   margin: 0 auto;
   width: 50%;
-}
+} */
 
 /* 03 - About Us */
 
@@ -118,9 +114,14 @@ p {
   flex: 1;
 }
 
+.about-text {
+  margin-left: 2em;
+}
+
 .about-img {
   justify-content: center;
   display: flex;
+  max-height: 290px; 
 }
 .about-us h2 {
   padding-bottom: 0.5em;
@@ -129,6 +130,7 @@ p {
 
 
 /* 04 - Nosso Serviços - Our Services */
+
 .servicos {
   height: 100%;
   background-color: #efefef;
@@ -149,6 +151,8 @@ p {
   flex-flow: wrap;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .coluna1  {
@@ -156,16 +160,13 @@ p {
   text-align: center;
   margin-bottom: 2em;
 }
+
 .coluna1 h3 {
   margin: 1em 0;
 }
 
 /* 05 - Como Funciona ? How it Works? */
 
-.how-it-works {
-   background-color: #000033;
-   padding: 1em;
-}
 .how-it-works-container {
   display: flex;
   display: -webkit-box;
@@ -175,6 +176,7 @@ p {
   flex-flow: wrap;
   -webkit-flex-flow: row wrap;
   justify-content: space-around; 
+  background-color: #000033;
 }
 
 .how-it-works-text, .how-it-works-image {
@@ -182,7 +184,7 @@ p {
 }
 
 .how-it-works-text {
-  margin: 3em 0 3em 4em;
+  margin: 3em 3em;
   width: 45%;
 }
 
@@ -216,7 +218,7 @@ p {
   margin-bottom: 1em;
 }
 
-.container-why {
+.container-why-top, .container-why-bot {
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -225,6 +227,8 @@ p {
   flex-flow: wrap;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .why-fontaniva img {
@@ -251,28 +255,36 @@ p {
   padding: 2rem 0;
 }
 
+.accordion-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 button.accordion {
   width: 100%;
   border: none;
+  background-color: #efefef;
   border-bottom: 1px solid #CCCCCC;
   outline: none;
   text-align: left;
   cursor: pointer;
   transition: background-color 0.2s linear;
-  font-size: 1em;
+  font-size: 0.750em;
   color: #000033;
-  padding-top: 1em;
+  padding-top: 1.5em;
 }
 
 button.accordion:after {
   content: '\f107';
   font-family: "fontawesome";
   float: right;
+  font-size: 2em;
 }
 
 button.accordion.is-open:after {
   content: '\f106';
   margin: 0.5em 0;
+  font-size: 2em;
 }
 
 button.accordion:hover, button.accordion.is-open {
@@ -282,6 +294,7 @@ button.accordion:hover, button.accordion.is-open {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
+  font-size: 0.8em;
   transition: max-height 0.2s ease-in-out;
   padding-top: 1em;
 }
@@ -298,7 +311,6 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 .form {
-  margin: 0 2em;
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -308,16 +320,14 @@ button.accordion:hover, button.accordion.is-open {
   -webkit-flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .left, .right {
   flex: 1;
 }
 
-.form-container {
-  width: 80%;
-  margin: 0 auto;
-}
 
 .contact p {
   text-align: center;
@@ -333,28 +343,47 @@ button.accordion:hover, button.accordion.is-open {
   border-radius: 0.250em;
   padding: 0.5em 1em;
   margin: 1em 0;
-  width: 90%;
+  width: 95%;
   font-size: 1em;
 }
-
+/* 
 .right input {
   color: #00CCCC;
   font-weight: 700;
 }
 
+
+.right > ::-webkit-input-placeholder {
+  color: #00CCCC;
+  font-weight: 700;
+}
+
+.right > ::-moz-placeholder {
+  color: #00CCCC;
+  font-weight: 700;
+}
+
+.right > ::-ms-placeholder {
+  color: #00CCCC;
+  font-weight: 700;
+}
+
+.right > ::placeholder {
+  color: #00CCCC;
+  font-weight: 700;
+} */
+
 .form textarea {
-  width: 90%;
   font-size: 1em;
-  margin-left: 0.1em;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   resize: none;
   border-radius: 0.250em;
   border: 1px solid #666666;
+  width: 95%;
 }
 
 .form button {
-  width: 90%;
   line-height: 3em;
   border-radius: 0.250em;
   background-color: #00CCCC;
@@ -362,6 +391,7 @@ button.accordion:hover, button.accordion.is-open {
   border: none;
   font-size: 1em;
   cursor: pointer;
+  width: 95%;
 }
 
 
@@ -379,12 +409,6 @@ button.accordion:hover, button.accordion.is-open {
 
 /* Media Queries */
 
-@media only screen and (max-width: 2440) {
-  .why-fontaniva {
-    padding: 4em 4em;
-  }
-}
-
 @media only screen and (max-width: 960px) {
   .left, .right {
     flex: auto;
@@ -393,30 +417,39 @@ button.accordion:hover, button.accordion.is-open {
   .ask h3 {
     font-size: 1em;
   }
-
+  
   .how-it-works-text {
     text-align: center;
-    margin: 3em 2em;
+    margin: 3em 5em;
   }
-
+  
   .coluna1 {
     width: 440px;
   }
   .how-it-works-image {
     display: none;
   }
-
-
-
-button.accordion:after {
-  display: none;
-}
-
-button.accordion.is-open:after {
-  display: none;
-}
-}
-
-@media only screen and (max-width: 650) {
   
+  .about-us {
+    flex: unset;
+  }
+  
+  button.accordion:after {
+    display: none;
+  }
+  
+  button.accordion.is-open:after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .about-us, .about-img {
+    flex: unset;
+  }
+}
+@media only screen and (max-width: 1248px) {
+  .about-us {
+    margin: 0 5em;
+  }
 }

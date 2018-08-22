@@ -1,3 +1,5 @@
+// ACCORDIONS //
+
 var accordions = document.getElementsByClassName("accordion");
 
 for (var i = 0; i < accordions.length; i++) {
@@ -14,3 +16,21 @@ for (var i = 0; i < accordions.length; i++) {
     }
   }
 }
+
+
+
+// SMOOTH SCROLLING //
+
+
+
+  // INITIALIZE SLICK SLIDER //
+
+  // $(document).ready(function(){
+  //   $('.banner').slick({
+  //     autoplay: true,
+  //     autoplaySpeed: 3000,
+  //     accessibility: true,
+  //     arrows: true,
+  //     dots: true,
+  //   });
+  // });
