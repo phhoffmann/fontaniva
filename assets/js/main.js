@@ -17,6 +17,9 @@ for (var i = 0; i < accordions.length; i++) {
   }
 }
 
+// ===== Scroll to Top ==== 
+
+
 
 
 // SMOOTH SCROLLING //
@@ -25,12 +28,12 @@ for (var i = 0; i < accordions.length; i++) {
 
   // INITIALIZE SLICK SLIDER //
 
-  // $(document).ready(function(){
-  //   $('.banner').slick({
-  //     autoplay: true,
-  //     autoplaySpeed: 3000,
-  //     accessibility: true,
-  //     arrows: true,
-  //     dots: true,
-  //   });
-  // });
+  $(document).ready(function(){
+    $('.banner').slick({
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      fade: true,
+      arrows: true
+    });
+  });

@@ -7,8 +7,9 @@
 body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
-  padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  padding: 0;
 }
 
 h2 {
@@ -26,23 +27,64 @@ p {
   line-height: 1.5em;
   color: #666666;
 }
+#button-top {
+    opacity .5s, visibility .5s;
+  background-color: #00CCCC;
+  border-radius: 4px;
+  bottom: 30px;
+  display: inline-block;
+  height: 50px;
+  opacity: 0;
+  position: fixed;
+  right: 30px;
+  text-align: center;
+  transition: background-color .3s, 
+  visibility: hidden;
+  width: 50px;
+  z-index: 2000;
+}
+#button-top::after {
+  color: #fff;
+  content: "\f077";
+  font-family: FontAwesome;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 50px;
+}
+#button-top:hover {
+  cursor: pointer;
+  background-color: #000033;
+}
+#button-top:active {
+  background-color: #555;
+}
+#button-top.show {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* 01 - Header */
 
 .main-menu {
+  align-items: center;
   background-color: #000033;
   color: #fff;
   display: flex;
+  flex-wrap: wrap;
   height: 115px;
-  justify-content: space-between;
+  justify-content: space-around;
+  overflow: hidden;
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
   width: 100%;
-  align-items: center;
+  z-index: 1000 !important;
 }
 
 .main-menu ul {
   display: flex;
   list-style-type: none;
-  margin-right: 2em;
 }
 
 .main-menu ul li {
@@ -50,27 +92,32 @@ p {
 }
 
 .main-menu ul li a {
-  text-decoration: none;
   color: #fff;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .main-menu ul li a:hover {
   color: #00CCCC;
 }
 
-.logo {
+/* .logo {
   float: left;
   align-self: center;
-  margin-left: 2em;
-}
+} */
 
 /* 02 - Banner */
+
+.banner {
+  margin-top: 115px;
+}
 
 .banner-img {
   background-image: url('../../img/banner-temp.png');
   background-size: cover;
+  height: 600px !important;
+  width: 100%;
 }
 
 /* .banner-text {
@@ -98,13 +145,13 @@ p {
 /* 03 - About Us */
 
 .about-us {
-  display: flex;
-  display: -webkit-box;
+  -webkit-flex-flow: row wrap;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: -webkit-flex;
+  display: flex;
   flex-flow: wrap;
-  -webkit-flex-flow: row wrap;
   justify-content: space-around;
   margin: 0 15em;
   padding: 5em 0;
@@ -119,8 +166,8 @@ p {
 }
 
 .about-img {
-  justify-content: center;
   display: flex;
+  justify-content: center;
   max-height: 290px; 
 }
 .about-us h2 {
@@ -132,8 +179,8 @@ p {
 /* 04 - Nosso Serviços - Our Services */
 
 .servicos {
-  height: 100%;
   background-color: #efefef;
+  height: 100%;
   padding-bottom: 2em;
   text-align: center;
 }
@@ -143,22 +190,22 @@ p {
 }
 
 .servicos > .servicos-wrap {
-  display: flex;
-  display: -webkit-box;
+  -webkit-flex-flow: row wrap;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: -webkit-flex;
+  display: flex;
   flex-flow: wrap;
-  -webkit-flex-flow: row wrap;
   justify-content: space-around;
-  width: 80%;
   margin: 0 auto;
+  width: 80%;
 }
 
 .coluna1  {
-  width: 300px;
-  text-align: center;
   margin-bottom: 2em;
+  text-align: center;
+  width: 300px;
 }
 
 .coluna1 h3 {
@@ -168,15 +215,15 @@ p {
 /* 05 - Como Funciona ? How it Works? */
 
 .how-it-works-container {
-  display: flex;
-  display: -webkit-box;
+  -webkit-flex-flow: row wrap;
+  background-color: #000033;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: -webkit-flex;
+  display: flex;
   flex-flow: wrap;
-  -webkit-flex-flow: row wrap;
   justify-content: space-around; 
-  background-color: #000033;
 }
 
 .how-it-works-text, .how-it-works-image {
@@ -219,16 +266,16 @@ p {
 }
 
 .container-why-top, .container-why-bot {
-  display: flex;
-  display: -webkit-box;
+  -webkit-flex-flow: row wrap;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: -webkit-flex;
+  display: flex;
   flex-flow: wrap;
-  -webkit-flex-flow: row wrap;
   justify-content: space-around;
-  width: 80%;
   margin: 0 auto;
+  width: 80%;
 }
 
 .why-fontaniva img {
@@ -251,40 +298,40 @@ p {
 }
 
 .ask h2 {
-  text-align: center;
   padding: 2rem 0;
+  text-align: center;
 }
 
 .accordion-container {
-  width: 90%;
   margin: 0 auto;
+  width: 90%;
 }
 
 button.accordion {
-  width: 100%;
-  border: none;
   background-color: #efefef;
   border-bottom: 1px solid #CCCCCC;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: background-color 0.2s linear;
-  font-size: 0.750em;
+  border: none;
   color: #000033;
+  cursor: pointer;
+  font-size: 0.750em;
+  outline: none;
   padding-top: 1.5em;
+  text-align: left;
+  transition: background-color 0.2s linear;
+  width: 100%;
 }
 
 button.accordion:after {
   content: '\f107';
-  font-family: "fontawesome";
   float: right;
+  font-family: "fontawesome";
   font-size: 2em;
 }
 
 button.accordion.is-open:after {
   content: '\f106';
-  margin: 0.5em 0;
   font-size: 2em;
+  margin: 0.5em 0;
 }
 
 button.accordion:hover, button.accordion.is-open {
@@ -292,11 +339,11 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 .accordion-content {
+  font-size: 0.8em;
   max-height: 0;
   overflow: hidden;
-  font-size: 0.8em;
-  transition: max-height 0.2s ease-in-out;
   padding-top: 1em;
+  transition: max-height 0.2s ease-in-out;
 }
 
 /* 08 - Contato */
@@ -311,17 +358,17 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 .form {
-  display: flex;
-  display: -webkit-box;
+  -webkit-flex-flow: row wrap;
+  align-items: center;
   display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: -webkit-flex;
+  display: flex;
   flex-flow: wrap;
-  -webkit-flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  width: 95%;
   margin: 0 auto;
+  width: 95%;
 }
 
 .left, .right {
@@ -339,12 +386,12 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 .form input {
-  border: 1px solid #666666;
   border-radius: 0.250em;
-  padding: 0.5em 1em;
-  margin: 1em 0;
-  width: 95%;
+  border: 1px solid #666666;
   font-size: 1em;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  width: 95%;
 }
 /* 
 .right input {
@@ -374,23 +421,23 @@ button.accordion:hover, button.accordion.is-open {
 } */
 
 .form textarea {
-  font-size: 1em;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 400;
-  resize: none;
   border-radius: 0.250em;
   border: 1px solid #666666;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  resize: none;
   width: 95%;
 }
 
 .form button {
-  line-height: 3em;
-  border-radius: 0.250em;
   background-color: #00CCCC;
-  color: #fff;
+  border-radius: 0.250em;
   border: none;
-  font-size: 1em;
+  color: #fff;
   cursor: pointer;
+  font-size: 1em;
+  line-height: 3em;
   width: 95%;
 }
 
@@ -400,10 +447,10 @@ button.accordion:hover, button.accordion.is-open {
 
 .footer {
   background-color: #000033;
-  text-align: center;
   color: #999999;
   font-size: 0.8em;
   padding: 3em 0;
+  text-align: center;
 }
 
 
@@ -447,6 +494,10 @@ button.accordion:hover, button.accordion.is-open {
   .about-us, .about-img {
     flex: unset;
   }
+  .main-menu ul {
+    font-size: 0.8em;
+  }
+
 }
 @media only screen and (max-width: 1248px) {
   .about-us {
