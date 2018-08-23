@@ -573,7 +573,7 @@ button.accordion:hover, button.accordion.is-open {
     max-height: 30px;
   }
 
-  ..main-menu ul li {
+  .main-menu ul li {
     margin: 0 0.5em;
   }
 }
