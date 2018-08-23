@@ -28,19 +28,20 @@
     </nav>
   </header>
   
-  
-  <div class="banner">
-    <div class="banner-img"></div>
-    <div class="banner-img"></div>
+  <div class="banner-wrap">
     <!-- <div class="banner-text">
       <span class="banner-title">#<span class="title-orange">Des</span>complica</span>
       <h3 class="banner-subtext">Antecipe seus recebíveis e tenha<br> um fluxo de caixa financeiramente saudável.</h3>
     </div> -->
+    <div class="banner">
+      <div class="banner-img"></div>
+      <div class="banner-img2"></div>
+    </div>
   </div>
+  
   
   <main>
     <a id="button-top"></a>
-    
     <section class="about-us" id="about-us">
       <div class="about-img">
         <img src="img/about-img.png" alt="Imagem vetor de homem com dinheiro.">
@@ -197,7 +198,7 @@
     
     <div class="contact" id="contact">
       <h2>Contato</h2>
-      <p>Os campos em asterisco são obrigatórios. <br/> Para fazer um pré-cadastro da sua empresa conosco, você deve preencher os campos em <span class="form-blue">azul.</span></p>
+      <p>Os campos em asterisco são obrigatórios. <br/> Para fazer um pré-cadastro da sua empresa conosco, você deve preencher os campos em <span class="form-bold">negrito.</span></p>
       <form class="form form-container">
         <div class="left">
           <input type="text" id="nome" name="nome" placeholder="Nome*" required />  
@@ -206,10 +207,10 @@
           <textarea id="mensagem"  name="mensagem" placeholder="Mensagem" rows="6"></textarea>  
         </div>
         <div class="right">
-          <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ" style="color: #00CCCC; font-weight: 700;" required />  
-          <input type="text" id="sector" name="sector" placeholder="Setor da empresa" style="color: #00CCCC; font-weight: 700;" required />  
-          <input type="text" id="faturamento" name="faturamento" placeholder="Faturamento médio" style="color: #00CCCC; font-weight: 700;" required /> 
-          <input type="text" id="valormedio" name="valormedio" placeholder="Valor médio de duplicatas" style="color: #00CCCC; font-weight: 700;" required /> 
+          <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ" style="font-weight: 700;" required />  
+          <input type="text" id="sector" name="sector" placeholder="Setor da empresa" style="font-weight: 700;" required />  
+          <input type="text" id="faturamento" name="faturamento" placeholder="Faturamento médio" style="font-weight: 700;" required /> 
+          <input type="text" id="valormedio" name="valormedio" placeholder="Valor médio de duplicatas" style="font-weight: 700;" required /> 
           <button type="submit" class="botaoContato">Enviar</button>
         </div>  
       </form>
@@ -223,17 +224,8 @@
   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/slick/slick.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.banner').slick({
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        fade: true,
-        arrows: true
-      });
-    });
-    
+  
+  <script>
     var btn = $('#button-top');
     
     $(window).scroll(function() {
@@ -249,7 +241,13 @@
       $('html, body').animate({scrollTop:0}, '300');
     });
     
-    
+    $(document).on('click', 'a[href^="#"]', function (event) {
+      event.preventDefault();
+      
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+    });
   </script>
 </body>
 

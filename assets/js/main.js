@@ -17,15 +17,6 @@ for (var i = 0; i < accordions.length; i++) {
   }
 }
 
-// ===== Scroll to Top ==== 
-
-
-
-
-// SMOOTH SCROLLING //
-
-
-
   // INITIALIZE SLICK SLIDER //
 
   $(document).ready(function(){
@@ -34,6 +25,7 @@ for (var i = 0; i < accordions.length; i++) {
       autoplay: true,
       autoplaySpeed: 5000,
       fade: true,
-      arrows: true
+      mobileFirst: true,
+      arrows: false
     });
   });

@@ -29,6 +29,7 @@ p {
 }
 
 #button-top {
+
   opacity: .5s, visibility .5s;
   background-color: #00CCCC;
   border-radius: 4px;
@@ -43,9 +44,11 @@ p {
   visibility: hidden;
   width: 50px;
   z-index: 2000;
+
 }
 
 #button-top::after {
+
   color: #fff;
   content: "\f077";
   font-family: FontAwesome;
@@ -53,6 +56,7 @@ p {
   font-style: normal;
   font-weight: normal;
   line-height: 50px;
+
 }
 #button-top:hover {
   cursor: pointer;
@@ -69,6 +73,7 @@ p {
 /* 01 - Header */
 
 .main-menu {
+
   align-items: center;
   background-color: #000033;
   color: #fff;
@@ -82,6 +87,7 @@ p {
   top: 0;
   width: 100%;
   z-index: 1000 !important;
+
 }
 
 .main-menu ul {
@@ -94,10 +100,12 @@ p {
 }
 
 .main-menu ul li a {
+
   color: #fff;
   font-style: italic;
   font-weight: 400;
   text-decoration: none;
+
 }
 
 .main-menu ul li a:hover {
@@ -111,21 +119,38 @@ p {
 
 /* 02 - Banner */
 
+.banner-wrap {
+  position: relative;
+}
+
 .banner {
   margin-top: 115px;
 }
 
+
+
 .banner-img {
+
   background-image: url('../../img/banner-temp.png');
   background-size: cover;
-  height: 600px !important;
   width: 100%;
+  height: 70vh !important;
+
+}
+
+.banner-img2 {
+
+  background-image: url('../../img/banner-temp2.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 70vh !important;
+
 }
 
 /* .banner-text {
   text-align: center;
-  display: table-cell;
-  vertical-align: middle;
+  position: absolute;
+  z-index: 3000;
 }
 
 .banner-title {
@@ -141,12 +166,14 @@ p {
 .banner-subtext {
   color: #fff;
   margin: 0 auto;
-  width: 50%;
 } */
+
+
 
 /* 03 - About Us */
 
 .about-us {
+
   -webkit-flex-flow: row wrap;
   display: -moz-box;
   display: -ms-flexbox;
@@ -157,6 +184,7 @@ p {
   justify-content: space-around;
   margin: 0 15em;
   padding: 5em 0;
+
 }
 
 .about-img, .about-text {
@@ -192,6 +220,7 @@ p {
 }
 
 .servicos > .servicos-wrap {
+
   -webkit-flex-flow: row wrap;
   display: -moz-box;
   display: -ms-flexbox;
@@ -202,6 +231,7 @@ p {
   justify-content: space-around;
   margin: 0 auto;
   width: 80%;
+
 }
 
 .coluna1  {
@@ -217,6 +247,7 @@ p {
 /* 05 - Como Funciona ? How it Works? */
 
 .how-it-works-container {
+
   -webkit-flex-flow: row wrap;
   background-color: #000033;
   display: -moz-box;
@@ -226,6 +257,7 @@ p {
   display: flex;
   flex-flow: wrap;
   justify-content: space-around; 
+
 }
 
 .how-it-works-text, .how-it-works-image {
@@ -238,7 +270,7 @@ p {
 }
 
 .how-it-works-image {
-  background: url('/img/how-it-works.jpg');
+  background: url('../../img/how-it-works.jpg');
   background-size: cover;
 }
 
@@ -268,6 +300,7 @@ p {
 }
 
 .container-why-top, .container-why-bot {
+
   -webkit-flex-flow: row wrap;
   display: -moz-box;
   display: -ms-flexbox;
@@ -278,6 +311,7 @@ p {
   justify-content: space-around;
   margin: 0 auto;
   width: 80%;
+
 }
 
 .why-fontaniva img {
@@ -310,6 +344,7 @@ p {
 }
 
 button.accordion {
+
   background-color: #efefef;
   border-bottom: 1px solid #CCCCCC;
   border: none;
@@ -321,6 +356,7 @@ button.accordion {
   text-align: left;
   transition: background-color 0.2s linear;
   width: 100%;
+
 }
 
 button.accordion:after {
@@ -341,11 +377,13 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 .accordion-content {
+
   font-size: 0.8em;
   max-height: 0;
   overflow: hidden;
   padding-top: 1em;
   transition: max-height 0.2s ease-in-out;
+
 }
 
 /* 08 - Contato */
@@ -360,6 +398,7 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 .form {
+
   -webkit-flex-flow: row wrap;
   align-items: center;
   display: -moz-box;
@@ -371,6 +410,7 @@ button.accordion:hover, button.accordion.is-open {
   justify-content: center;
   margin: 0 auto;
   width: 95%;
+
 }
 
 .left, .right {
@@ -379,21 +419,27 @@ button.accordion:hover, button.accordion.is-open {
 
 
 .contact p {
+
   text-align: center;
   margin: 0 5em;
+
 }
 
-.form-blue {
-  color: #00CCCC;
+.form-bold {
+
+  font-weight: bold;
+
 }
 
 .form input {
+
   border-radius: 0.250em;
   border: 1px solid #666666;
   font-size: 1em;
   margin: 1em 0;
   padding: 0.5em 1em;
   width: 95%;
+
 }
 /* 
 .right input {
@@ -423,6 +469,7 @@ button.accordion:hover, button.accordion.is-open {
 } */
 
 .form textarea {
+
   border-radius: 0.250em;
   border: 1px solid #666666;
   font-family: 'Ubuntu', sans-serif;
@@ -430,9 +477,11 @@ button.accordion:hover, button.accordion.is-open {
   font-weight: 400;
   resize: none;
   width: 95%;
+
 }
 
 .form button {
+
   background-color: #00CCCC;
   border-radius: 0.250em;
   border: none;
@@ -441,6 +490,7 @@ button.accordion:hover, button.accordion.is-open {
   font-size: 1em;
   line-height: 3em;
   width: 95%;
+
 }
 
 
@@ -480,7 +530,8 @@ button.accordion:hover, button.accordion.is-open {
   }
   
   .about-us {
-    flex: unset;
+    flex: auto;
+    text-align: center;
   }
   
   button.accordion:after {
@@ -494,15 +545,35 @@ button.accordion:hover, button.accordion.is-open {
 
 @media only screen and (max-width: 660px) {
   .about-us, .about-img {
-    flex: unset;
+    flex: auto;
+    text-align: center;
   }
   .main-menu ul {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 
+  .about-text {
+    margin-top: 1em;
+  }
 }
+
 @media only screen and (max-width: 1248px) {
   .about-us {
     margin: 0 5em;
+  }
+}
+
+
+@media only screen and (max-width: 375px) {
+  .main-menu ul {
+    font-size: 0.7em;
+  }
+
+  .logo {
+    max-height: 30px;
+  }
+
+  ..main-menu ul li {
+    margin: 0 0.5em;
   }
 }
