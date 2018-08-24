@@ -29,7 +29,7 @@ p {
 }
 
 #button-top {
-
+  
   opacity: .5s, visibility .5s;
   background-color: #00CCCC;
   border-radius: 4px;
@@ -44,11 +44,11 @@ p {
   visibility: hidden;
   width: 50px;
   z-index: 2000;
-
+  
 }
 
 #button-top::after {
-
+  
   color: #fff;
   content: "\f077";
   font-family: FontAwesome;
@@ -56,7 +56,7 @@ p {
   font-style: normal;
   font-weight: normal;
   line-height: 50px;
-
+  
 }
 #button-top:hover {
   cursor: pointer;
@@ -73,7 +73,7 @@ p {
 /* 01 - Header */
 
 .main-menu {
-
+  
   align-items: center;
   background-color: #000033;
   color: #fff;
@@ -87,7 +87,7 @@ p {
   top: 0;
   width: 100%;
   z-index: 1000 !important;
-
+  
 }
 
 .main-menu ul {
@@ -100,12 +100,12 @@ p {
 }
 
 .main-menu ul li a {
-
+  
   color: #fff;
   font-style: italic;
   font-weight: 400;
   text-decoration: none;
-
+  
 }
 
 .main-menu ul li a:hover {
@@ -127,30 +127,25 @@ p {
   margin-top: 115px;
 }
 
-
-
 .banner-img {
+  background-size: cover;
+  width: 100%;
+  height: 550px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.banner-img-1 {
   background-image: url('../../img/banner-temp.png');
-  background-size: cover;
-  width: 100%;
-  height: 70vh !important;
-
 }
 
-.banner-img2 {
-
+.banner-img-2 {
   background-image: url('../../img/banner-temp2.jpg');
-  background-size: cover;
-  width: 100%;
-  height: 70vh !important;
-
 }
 
-/* .banner-text {
+.banner-text {
   text-align: center;
-  position: absolute;
-  z-index: 3000;
 }
 
 .banner-title {
@@ -166,25 +161,20 @@ p {
 .banner-subtext {
   color: #fff;
   margin: 0 auto;
-} */
+}
 
 
 
 /* 03 - About Us */
 
 .about-us {
-
-  -webkit-flex-flow: row wrap;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
+  
   display: flex;
-  flex-flow: wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   margin: 0 15em;
   padding: 5em 0;
-
+  
 }
 
 .about-img, .about-text {
@@ -220,7 +210,7 @@ p {
 }
 
 .servicos > .servicos-wrap {
-
+  
   -webkit-flex-flow: row wrap;
   display: -moz-box;
   display: -ms-flexbox;
@@ -231,7 +221,7 @@ p {
   justify-content: space-around;
   margin: 0 auto;
   width: 80%;
-
+  
 }
 
 .coluna1  {
@@ -247,7 +237,7 @@ p {
 /* 05 - Como Funciona ? How it Works? */
 
 .how-it-works-container {
-
+  
   -webkit-flex-flow: row wrap;
   background-color: #000033;
   display: -moz-box;
@@ -257,7 +247,7 @@ p {
   display: flex;
   flex-flow: wrap;
   justify-content: space-around; 
-
+  
 }
 
 .how-it-works-text, .how-it-works-image {
@@ -300,7 +290,7 @@ p {
 }
 
 .container-why-top, .container-why-bot {
-
+  
   -webkit-flex-flow: row wrap;
   display: -moz-box;
   display: -ms-flexbox;
@@ -311,7 +301,7 @@ p {
   justify-content: space-around;
   margin: 0 auto;
   width: 80%;
-
+  
 }
 
 .why-fontaniva img {
@@ -344,19 +334,22 @@ p {
 }
 
 button.accordion {
-
+  
+  align-items: center;
   background-color: #efefef;
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC !important;
   border: none;
   color: #000033;
   cursor: pointer;
+  display: flex;
   font-size: 0.750em;
+  justify-content: space-between;
   outline: none;
-  padding-top: 1.5em;
+  padding: 1em;
   text-align: left;
   transition: background-color 0.2s linear;
   width: 100%;
-
+  
 }
 
 button.accordion:after {
@@ -377,13 +370,13 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 .accordion-content {
-
+  
   font-size: 0.8em;
   max-height: 0;
   overflow: hidden;
   padding-top: 1em;
   transition: max-height 0.2s ease-in-out;
-
+  
 }
 
 /* 08 - Contato */
@@ -398,90 +391,61 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 .form {
-
-  -webkit-flex-flow: row wrap;
-  align-items: center;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
+  
+  align-items: flex-start;
   display: flex;
-  flex-flow: wrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
   margin: 0 auto;
-  width: 95%;
-
+  width: 100%;
+  padding: 1em;
+  
 }
 
 .left, .right {
-  flex: 1;
+  width: calc(50% - 0.5em);
 }
 
 
 .contact p {
-
+  
   text-align: center;
   margin: 0 5em;
-
+  
 }
 
 .form-bold {
-
+  
   font-weight: bold;
-
+  
 }
 
 .form input {
-
+  
   border-radius: 0.250em;
   border: 1px solid #666666;
   font-size: 1em;
-  margin: 1em 0;
+  margin-bottom: 2em;
   padding: 0.5em 1em;
-  width: 95%;
-
-}
-/* 
-.right input {
-  color: #00CCCC;
-  font-weight: 700;
+  width: 100%;
+  
 }
 
-
-.right > ::-webkit-input-placeholder {
-  color: #00CCCC;
-  font-weight: 700;
-}
-
-.right > ::-moz-placeholder {
-  color: #00CCCC;
-  font-weight: 700;
-}
-
-.right > ::-ms-placeholder {
-  color: #00CCCC;
-  font-weight: 700;
-}
-
-.right > ::placeholder {
-  color: #00CCCC;
-  font-weight: 700;
-} */
 
 .form textarea {
-
+  
   border-radius: 0.250em;
   border: 1px solid #666666;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1em;
   font-weight: 400;
   resize: none;
-  width: 95%;
-
+  width: 100%;
+  
 }
 
 .form button {
-
+  
   background-color: #00CCCC;
   border-radius: 0.250em;
   border: none;
@@ -489,8 +453,8 @@ button.accordion:hover, button.accordion.is-open {
   cursor: pointer;
   font-size: 1em;
   line-height: 3em;
-  width: 95%;
-
+  width: 100%;
+  
 }
 
 
@@ -506,13 +470,13 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 
-/* Media Queries */
+/* 10 - Media Queries */
 
 @media only screen and (max-width: 960px) {
   .left, .right {
     flex: auto;
   }
-
+  
   .ask h3 {
     font-size: 1em;
   }
@@ -531,7 +495,6 @@ button.accordion:hover, button.accordion.is-open {
   
   .about-us {
     flex: auto;
-    text-align: center;
   }
   
   button.accordion:after {
@@ -544,14 +507,30 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 @media only screen and (max-width: 660px) {
+  .banner-img {
+    height: 400px !important;
+  }
+  
+  
+  .banner-img-1, .banner-img-2 {
+    background-position-x: -4em;
+  }
   .about-us, .about-img {
     flex: auto;
-    text-align: center;
   }
+  
+  .banner-title {
+    font-size: 3em;
+  }
+  
+  .banner-subtext {
+    font-size: 0.9em;
+  }
+  
   .main-menu ul {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
-
+  
   .about-text {
     margin-top: 1em;
   }
@@ -563,17 +542,24 @@ button.accordion:hover, button.accordion.is-open {
   }
 }
 
-
 @media only screen and (max-width: 375px) {
   .main-menu ul {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
-
+  
   .logo {
     max-height: 30px;
   }
-
+  
   .main-menu ul li {
     margin: 0 0.5em;
+  }
+  
+  .banner-title {
+    font-size: 2em;
+  }
+  
+  .banner-subtext {
+    font-size: 0.9em;
   }
 }
