@@ -527,6 +527,11 @@ button.accordion:hover, button.accordion.is-open {
     flex: auto;
   }
   
+  .left, .right {
+    flex: auto;
+    padding: 0 1em;
+  }
+
   .banner-title {
     font-size: 3em;
   }
@@ -564,7 +569,7 @@ button.accordion:hover, button.accordion.is-open {
   .ask {
     padding: 2em 0em;
   }
-
+  
   .main-menu {
     position: fixed;
   }
