@@ -83,7 +83,7 @@ p {
   justify-content: space-around;
   overflow: hidden;
   padding: 0.5em;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 1000 !important;
@@ -366,7 +366,7 @@ button.accordion.is-open:after {
 }
 
 button.accordion:hover, button.accordion.is-open {
-  background-color: #ddd;
+  background-color: #efefef;
 }
 
 .accordion-content {
@@ -473,6 +473,11 @@ button.accordion:hover, button.accordion.is-open {
 /* 10 - Media Queries */
 
 @media only screen and (max-width: 960px) {
+  
+  .main-menu {
+    position: fixed;
+  }
+  
   .left, .right {
     flex: auto;
   }
@@ -511,6 +516,9 @@ button.accordion:hover, button.accordion.is-open {
     height: 400px !important;
   }
   
+  .main-menu {
+    position: fixed;
+  }
   
   .banner-img-1, .banner-img-2 {
     background-position-x: -4em;
@@ -540,11 +548,18 @@ button.accordion:hover, button.accordion.is-open {
   .about-us {
     margin: 0 5em;
   }
+  .main-menu {
+    position: fixed;
+  }
 }
 
 @media only screen and (max-width: 375px) {
   .main-menu ul {
     font-size: 0.6em;
+  }
+  
+  .main-menu {
+    position: fixed;
   }
   
   .logo {
