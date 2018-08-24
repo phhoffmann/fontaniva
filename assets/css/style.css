@@ -494,6 +494,10 @@ button.accordion:hover, button.accordion.is-open {
     display: none;
   }
   
+  .left, .right {
+    width: initial;
+    margin-bottom: 1em;
+  }
   .about-us {
     flex: auto;
   }
