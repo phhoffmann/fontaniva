@@ -478,10 +478,6 @@ button.accordion:hover, button.accordion.is-open {
     position: fixed;
   }
   
-  .left, .right {
-    flex: auto;
-  }
-  
   .ask h3 {
     font-size: 1em;
   }
@@ -514,6 +510,10 @@ button.accordion:hover, button.accordion.is-open {
 @media only screen and (max-width: 660px) {
   .banner-img {
     height: 400px !important;
+  }
+
+  .ask {
+    padding: 2em 0em;
   }
   
   .main-menu {
@@ -551,6 +551,9 @@ button.accordion:hover, button.accordion.is-open {
   .main-menu {
     position: fixed;
   }
+  .ask {
+    padding: 2em 0em;
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -558,6 +561,10 @@ button.accordion:hover, button.accordion.is-open {
     font-size: 0.6em;
   }
   
+  .ask {
+    padding: 2em 0em;
+  }
+
   .main-menu {
     position: fixed;
   }
