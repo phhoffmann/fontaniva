@@ -83,7 +83,7 @@ p {
   justify-content: space-around;
   overflow: hidden;
   padding: 0.5em;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000 !important;
@@ -211,13 +211,8 @@ p {
 
 .servicos > .servicos-wrap {
   
-  -webkit-flex-flow: row wrap;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  flex-flow: wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   margin: 0 auto;
   width: 80%;
@@ -238,14 +233,9 @@ p {
 
 .how-it-works-container {
   
-  -webkit-flex-flow: row wrap;
   background-color: #000033;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  flex-flow: wrap;
+  flex-flow: row wrap;
   justify-content: space-around; 
   
 }
@@ -296,8 +286,7 @@ p {
   display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
-  display: flex;
-  flex-flow: wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   margin: 0 auto;
   width: 80%;
@@ -474,10 +463,6 @@ button.accordion:hover, button.accordion.is-open {
 
 @media only screen and (max-width: 960px) {
   
-  .main-menu {
-    position: fixed;
-  }
-  
   .ask h3 {
     font-size: 1em;
   }
@@ -520,10 +505,6 @@ button.accordion:hover, button.accordion.is-open {
     padding: 2em 0em;
   }
   
-  .main-menu {
-    position: fixed;
-  }
-  
   .banner-img-1, .banner-img-2 {
     background-position-x: -4em;
   }
@@ -557,9 +538,7 @@ button.accordion:hover, button.accordion.is-open {
   .about-us {
     margin: 0 5em;
   }
-  .main-menu {
-    position: fixed;
-  }
+ 
   .ask {
     padding: 2em 0em;
   }
