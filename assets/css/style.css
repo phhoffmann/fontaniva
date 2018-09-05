@@ -587,3 +587,9 @@ button.accordion:hover, button.accordion.is-open {
     font-size: 0.9em;
   }
 }
+
+@media only screen and (min-width: 1500px) {
+  .banner-img-1 {
+    background-position-y: -10em;
+  }
+}
