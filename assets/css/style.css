@@ -90,16 +90,16 @@ p {
   
 }
 
-.main-menu ul {
+.main-menu .menu-wrap {
   display: flex;
   list-style-type: none;
 }
 
-.main-menu ul li {
+.main-menu .menu-wrap .menu-link {
   margin: 0 2em;
 }
 
-.main-menu ul li a {
+.main-menu .menu-wrap .menu-link a {
   
   color: #fff;
   font-style: italic;
@@ -108,7 +108,7 @@ p {
   
 }
 
-.main-menu ul li a:hover {
+.main-menu .menu-wrap .menu-link a:hover {
   color: #00CCCC;
 }
 
@@ -138,6 +138,7 @@ p {
 
 .banner-img-1 {
   background-image: url('../../img/banner-temp.png');
+  background-position-y: -4em;
 }
 
 .banner-img-2 {
@@ -264,6 +265,7 @@ p {
   margin-top: 2em;
 }
 
+
 .how-it-works-text a {
   color: #FF9900;
 }
@@ -275,8 +277,16 @@ p {
   padding: 4rem 0;   
 }
 
+.why-fontaniva .sub-title {
+  color: #00CCCC;
+  font-weight: 900;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
 .why-fontaniva h2 {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .container-why-top, .container-why-bot {
@@ -399,7 +409,7 @@ button.accordion:hover, button.accordion.is-open {
 .contact p {
   
   text-align: center;
-  margin: 0 5em;
+  margin: 0 auto;
   
 }
 
@@ -469,7 +479,7 @@ button.accordion:hover, button.accordion.is-open {
   
   .how-it-works-text {
     text-align: center;
-    margin: 3em 5em;
+    margin: 3em 1em;
   }
   
   .coluna1 {
@@ -494,6 +504,9 @@ button.accordion:hover, button.accordion.is-open {
   button.accordion.is-open:after {
     display: none;
   }
+  .banner-img-1 {
+    background-position-y: 0;
+  }
 }
 
 @media only screen and (max-width: 660px) {
@@ -507,6 +520,7 @@ button.accordion:hover, button.accordion.is-open {
   
   .banner-img-1, .banner-img-2 {
     background-position-x: -4em;
+    background-position-y: 0;
   }
   .about-us, .about-img {
     flex: auto;
@@ -536,7 +550,7 @@ button.accordion:hover, button.accordion.is-open {
 
 @media only screen and (max-width: 1248px) {
   .about-us {
-    margin: 0 5em;
+    margin: 0 1em;
   }
  
   .ask {
