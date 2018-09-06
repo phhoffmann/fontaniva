@@ -137,12 +137,12 @@ p {
 }
 
 .banner-img-1 {
-  background-image: url('../../img/banner-temp.png');
+  background-image: url('../../img/banner-img-1.png');
   background-position-y: -4em;
 }
 
 .banner-img-2 {
-  background-image: url('../../img/banner-temp2.jpg');
+  background-image: url('../../img/banner-img-2.png');
 }
 
 .banner-text {

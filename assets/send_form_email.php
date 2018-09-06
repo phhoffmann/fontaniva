@@ -1,5 +1,7 @@
 <?php
 
+
+
 if (isset($_POST['f_name']) && isset($_POST['f_email']) && isset($_POST['f_phone']) && isset($_POST['f_cnpj']) && isset($_POST['f_sector']) && isset($_POST['f_faturamento']) && isset($_POST['f_valorMedio'])) {
     
     $name = $_POST['f_name'];
